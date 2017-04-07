@@ -1,0 +1,97 @@
+03-30 21:05:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DELETE FROM CONTATOS WHERE ID IS  "; expected "NOT, NULL, DISTINCT"; SQL statement:
+delete from contatos where id is  [42001-176]
+03-30 21:15:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM CONTATOS WHERE NOME IS JAVA.UTIL.SCANNER[DELIMITERS=[*]\P JAVAWHITESPACE +][POSITION=2][MATCH VALID=TRUE][NEED INPUT=FALSE][SOURCE CLOSED=FALSE][SKIPPED=FALSE][GROUP SEPARATOR=\.][DECIMAL SEPARATOR=\,][POSITIVE PREFIX=][NEGATIVE PREFIX=\Q-\E][POSITIVE SUFFIX=][NEGATIVE SUFFIX=][NAN STRING=\Q�\E][INFINITY STRING=\Q∞\E] "; SQL statement:
+select * from contatos where nome is java.util.Scanner[delimiters=\p javaWhitespace +][position=2][match valid=true][need input=false][source closed=false][skipped=false][group separator=\.][decimal separator=\,][positive prefix=][negative prefix=\Q-\E][positive suffix=][negative suffix=][NaN string=\Q�\E][infinity string=\Q∞\E] [42000-176]
+04-03 15:45:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM CONTATOS WHERE ID IS GDGDRGRD% "; SQL statement:
+select * from contatos where id is gdgdrgrd% [42000-176]
+04-04 20:06:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM CONTATOS WHERE ID IS OSVALDO% "; SQL statement:
+select * from contatos where id is Osvaldo% [42000-176]
+04-04 20:08:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM CONTATOS WHERE ID IS 65% "; SQL statement:
+select * from contatos where id is 65% [42000-176]
+04-04 20:17:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "UNINOVE" not found; SQL statement:
+select * from contatos where nome is Uninove [42122-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:148)
+	at org.h2.expression.Comparison.optimize(Comparison.java:181)
+	at org.h2.command.dml.Select.prepare(Select.java:834)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:276)
+	at br.com.lojamodel.dao.impl.ContatoDAO.buscarNome(ContatoDAO.java:146)
+	at br.com.lojamodel.controle.ContatosControle.processoBuscaContatosNome(ContatosControle.java:78)
+	at br.com.lojamodel.controle.ContatosControle.main(ContatosControle.java:138)
+04-04 20:18:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "UNINOVE" not found; SQL statement:
+select * from contatos where nome = Uninove [42122-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:148)
+	at org.h2.expression.Comparison.optimize(Comparison.java:181)
+	at org.h2.command.dml.Select.prepare(Select.java:834)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:276)
+	at br.com.lojamodel.dao.impl.ContatoDAO.buscarNome(ContatoDAO.java:146)
+	at br.com.lojamodel.controle.ContatosControle.processoBuscaContatosNome(ContatosControle.java:78)
+	at br.com.lojamodel.controle.ContatosControle.main(ContatosControle.java:138)
+04-04 20:19:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM CONTATOS WHERE NOME = OSVALDO MARTINS[*] "; SQL statement:
+select * from contatos where nome = Osvaldo martins [42000-176]
+04-04 20:19:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM CONTATOS WHERE NOME = OSVALDO MARTINS[*]; "; SQL statement:
+select * from contatos where nome = Osvaldo martins; [42000-176]
+04-04 20:34:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE CONTATOS SET NOME = JAVA.UTIL.SCANNER[DELIMITERS=[*]\P JAVAWHITESPACE +][POSITION=7][MATCH VALID=TRUE][NEED INPUT=FALSE][SOURCE CLOSED=FALSE][SKIPPED=FALSE][GROUP SEPARATOR=\.][DECIMAL SEPARATOR=\,][POSITIVE PREFIX=][NEGATIVE PREFIX=\Q-\E][POSITIVE SUFFIX=][NEGATIVE SUFFIX=][NAN STRING=\Q�\E][INFINITY STRING=\Q∞\E], EMAIL = EMAIL, DATANASCIMENTO 27/25 "; SQL statement:
+update contatos SET nome = java.util.Scanner[delimiters=\p javaWhitespace +][position=7][match valid=true][need input=false][source closed=false][skipped=false][group separator=\.][decimal separator=\,][positive prefix=][negative prefix=\Q-\E][positive suffix=][negative suffix=][NaN string=\Q�\E][infinity string=\Q∞\E], email = email, dataNascimento 27/25 [42000-176]
+04-04 20:35:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE CONTATOS SET NOME = 'java.util.Scanner[delimiters=\p{javaWhitespace}+][position=3][match valid=true][need input=false][source closed=false][skipped=false][group separator=\.][decimal separator=\,][positive prefix=][negative prefix=\Q-\E][positive suffix=][negative suffix=][NaN string=\Q�\E][infinity string=\Q∞\E]', EMAIL = 's', DATANASCIMENTO 's'[*] "; expected "., ="; SQL statement:
+update contatos SET nome = 'java.util.Scanner[delimiters=\p{javaWhitespace}+][position=3][match valid=true][need input=false][source closed=false][skipped=false][group separator=\.][decimal separator=\,][positive prefix=][negative prefix=\Q-\E][positive suffix=][negative suffix=][NaN string=\Q�\E][infinity string=\Q∞\E]', email = 's', dataNascimento 's' [42001-176]
+04-04 20:41:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "NOME VARCHAR(255)": "STRINGDECODE('java.util.Scanner[delimiters=\\p{javaWhitespace}+][position=7][match valid=true][need input=false][source closed=f... (293)"; SQL statement:
+update contatos SET nome = 'java.util.Scanner[delimiters=\p{javaWhitespace}+][position=7][match valid=true][need input=false][source closed=false][skipped=false][group separator=\.][decimal separator=\,][positive prefix=][negative prefix=\Q-\E][positive suffix=][negative suffix=][NaN string=\Q�\E][infinity string=\Q∞\E]' where id is 28 [22001-176]
+04-04 20:41:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "NOME VARCHAR(255)": "STRINGDECODE('java.util.Scanner[delimiters=\\p{javaWhitespace}+][position=3][match valid=true][need input=false][source closed=f... (293)"; SQL statement:
+update contatos SET nome = 'java.util.Scanner[delimiters=\p{javaWhitespace}+][position=3][match valid=true][need input=false][source closed=false][skipped=false][group separator=\.][decimal separator=\,][positive prefix=][negative prefix=\Q-\E][positive suffix=][negative suffix=][NaN string=\Q�\E][infinity string=\Q∞\E]' where id = 28 [22001-176]
+04-04 20:44:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "NOME VARCHAR(255)": "STRINGDECODE('java.util.Scanner[delimiters=\\p{javaWhitespace}+][position=3][match valid=true][need input=false][source closed=f... (293)"; SQL statement:
+update contatos SET nome = 'java.util.Scanner[delimiters=\p{javaWhitespace}+][position=3][match valid=true][need input=false][source closed=false][skipped=false][group separator=\.][decimal separator=\,][positive prefix=][negative prefix=\Q-\E][positive suffix=][negative suffix=][NaN string=\Q�\E][infinity string=\Q∞\E]' where id = 28 [22001-176]
+04-04 20:46:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "DATE" constant "java.util.Scanner[delimiters=\p{javaWhitespace}+][position=4][match valid=true][need input=false][source closed=false][skipped=false][group separator=\.][decimal separator=\,][positive prefix=][negative prefix=\Q-\E][positive suffix=][negative suffix=][NaN string=\Q�\E][infinity string=\Q∞\E]"; SQL statement:
+update contatos SET nome = 'brun', email = 'java.util.Scanner[delimiters=\p{javaWhitespace}+][position=4][match valid=true][need input=false][source closed=false][skipped=false][group separator=\.][decimal separator=\,][positive prefix=][negative prefix=\Q-\E][positive suffix=][negative suffix=][NaN string=\Q�\E][infinity string=\Q∞\E]', endereco = 'java.util.Scanner[delimiters=\p{javaWhitespace}+][position=4][match valid=true][need input=false][source closed=false][skipped=false][group separator=\.][decimal separator=\,][positive prefix=][negative prefix=\Q-\E][positive suffix=][negative suffix=][NaN string=\Q�\E][infinity string=\Q∞\E]', dataNascimento = 'java.util.Scanner[delimiters=\p{javaWhitespace}+][position=4][match valid=true][need input=false][source closed=false][skipped=false][group separator=\.][decimal separator=\,][positive prefix=][negative prefix=\Q-\E][positive suffix=][negative suffix=][NaN string=\Q�\E][infinity string=\Q∞\E]'where id = 28 [22007-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:167)
+	at org.h2.value.ValueDate.parse(ValueDate.java:71)
+	at org.h2.value.Value.convertTo(Value.java:860)
+	at org.h2.table.Column.convert(Column.java:151)
+	at org.h2.command.dml.Update.update(Update.java:122)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:79)
+	at org.h2.command.Command.executeUpdate(Command.java:254)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:199)
+	at br.com.lojamodel.dao.impl.ContatoDAO.update(ContatoDAO.java:253)
+	at br.com.lojamodel.controle.ContatosControle.processoUPDATE(ContatosControle.java:40)
+	at br.com.lojamodel.controle.ContatosControle.main(ContatosControle.java:155)
+Caused by: java.lang.IllegalArgumentException: java.util.Scanner[delimiters=\p{javaWhitespace}+][position=4][match valid=true][need input=false][source closed=false][skipped=false][group separator=\.][decimal separator=\,][positive prefix=][negative prefix=\Q-\E][positive suffix=][negative suffix=][NaN string=\Q�\E][infinity string=\Q∞\E]
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:273)
+	at org.h2.value.ValueDate.parse(ValueDate.java:69)
+	... 9 more
+04-04 20:47:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "EMAIL VARCHAR(255)": "STRINGDECODE('java.util.Scanner[delimiters=\\p{javaWhitespace}+][position=23][match valid=true][need input=false][source closed=... (294)"; SQL statement:
+update contatos SET nome = 'bruno', email = 'java.util.Scanner[delimiters=\p{javaWhitespace}+][position=23][match valid=true][need input=false][source closed=false][skipped=false][group separator=\.][decimal separator=\,][positive prefix=][negative prefix=\Q-\E][positive suffix=][negative suffix=][NaN string=\Q�\E][infinity string=\Q∞\E]', endereco = 'java.util.Scanner[delimiters=\p{javaWhitespace}+][position=13][match valid=true][need input=false][source closed=false][skipped=false][group separator=\.][decimal separator=\,][positive prefix=][negative prefix=\Q-\E][positive suffix=][negative suffix=][NaN string=\Q�\E][infinity string=\Q∞\E]'where id = 28 [22001-176]
+04-04 20:48:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "ENDERECO VARCHAR(255)": "STRINGDECODE('java.util.Scanner[delimiters=\\p{javaWhitespace}+][position=5][match valid=true][need input=false][source closed=f... (293)"; SQL statement:
+update contatos SET nome = 'eide', email = 'eeded', endereco = 'java.util.Scanner[delimiters=\p{javaWhitespace}+][position=5][match valid=true][need input=false][source closed=false][skipped=false][group separator=\.][decimal separator=\,][positive prefix=][negative prefix=\Q-\E][positive suffix=][negative suffix=][NaN string=\Q�\E][infinity string=\Q∞\E]'where id = 28 [22001-176]
